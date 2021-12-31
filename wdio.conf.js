@@ -23,6 +23,12 @@ exports.config = {
     specs: [
         './test/specs/**/*.js'
     ],
+    suites: {
+        text: [
+            './test/specs/element_text/*.js'
+        ],
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
