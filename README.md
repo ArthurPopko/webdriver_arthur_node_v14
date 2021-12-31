@@ -15,17 +15,22 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 `npx wdio run wdio.conf.js`
 ## Running the defined suite locally:
 **Specify suite run in "package.json":**
+
 `"scripts": {
 "test": "wdio",
 "element_text": "wdio --suite <suitename>"
 }`
+
 **Define suite scope in "wdio.conf.js":**
+
 `suites: {
 element_text: [
 './test/specs/element_text/*.js'
 ],
 },`
+
 **Run the defined suite:**
+
 `npm run <suitename>`
 
 to be filled up...
