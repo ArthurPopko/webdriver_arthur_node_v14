@@ -1,23 +1,29 @@
+const MainPage = require('../../pageobjects/main.page')
 describe("Element interaction", function () {
     it("Element element text css H2 console log", () => {
         browser.url('/')
-        let text = $("h2").getText()
+        let text = MainPage.subHeading.getText()
         console.log('Here must be a text:')
         console.log(text);
     })
 
     it("Element element text css HEADING console log", () => {
         browser.url('/')
-        let text = $(".heading").getText()
+        let text = MainPage.pageHeader.getText()
         console.log('Here must be a text:')
         console.log(text);
     })
 
     it("Element element text Xpath FOOTER console log", () => {
         browser.url('/')
-        let text = $("//*[@id='page-footer']").getText()
+        let text = MainPage.pageFooter.getText()
         console.log('Here must be a text:')
         console.log(text);
+    })
+
+    it("Element element text Li console log", () => {
+        browser.url('/')
+        MainPage.getLiText()
     })
 
 })
