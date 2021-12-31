@@ -5,26 +5,38 @@ The project correctly works with Node.js 14.
 It's highly recommended to use NVM. It will allow you to switch between the different versions of Node.js on demand.
 **https://github.com/nvm-sh/nvm.git**
 
-######NOTE: 
+##### NOTE:
+
 1. check the node version before every test run:
 `node -v`
 2. choose the 14th node version: `nvm use 14`
 
-## 1. Running all of auto-tests locally:
-`npx wdio run wdio.conf.js`
+## Running all of auto-tests locally:
+`npm run test`
 ## Running the defined suite locally:
-###Specify suite run in "package.json":
-`"scripts": {
-"test": "wdio",
-"element_text": "wdio --suite <suitename>"
-}`
-###Define suite scope in "wdio.conf.js":
+
+`npm run <suiteName>`
+
+## You may also specify your own suites:
+
+**Define suite name and scope in "wdio.conf.js":**
+
 `suites: {
-element_text: [
-'./test/specs/element_text/*.js'
+<suiteName>: [
+'./test/specs_path/*.js'
 ],
 },`
-###Run the defined suite:
+
+**Specify the suite run command in "package.json":**
+
+`"scripts": {
+"test": "wdio",
+"textSuite": "wdio --suite textSuite",
+"<suiteName>": "wdio --suite <suitename>"
+}`
+
+**Run the defined suite:**
+
 `npm run <suitename>`
 
-######***to be filled up...***
+to be filled up...

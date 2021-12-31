@@ -27,7 +27,7 @@ exports.config = {
         './test/specs/**/*.js'
     ],
     suites: {
-        text: [
+        textSuite: [
             './test/specs/element_text/*.js'
         ],
     },

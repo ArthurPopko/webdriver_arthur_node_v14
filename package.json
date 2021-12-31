@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio",
-    "text": "wdio --suite text"
+    "textSuite": "wdio --suite textSuite"
   },
   "repository": {
     "type": "git",
