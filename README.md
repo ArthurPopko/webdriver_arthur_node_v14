@@ -14,20 +14,24 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 ## Running all of auto-tests locally:
 `npm run test`
 ## Running the defined suite locally:
-**Specify suite run in "package.json":**
+
+`npm run <suiteName>`
+
+**Define suite name and scope in "wdio.conf.js":**
+
+`suites: {
+<suiteName>: [
+'./test/specs_path/*.js'
+],
+},`
+
+**You may also specify suites in "package.json":**
 
 `"scripts": {
 "test": "wdio",
-"textSuite": "wdio --suite <suitename>"
+"textSuite": "wdio --suite textSuite",
+"<suiteName>": "wdio --suite <suitename>"
 }`
-
-**Define suite scope in "wdio.conf.js":**
-
-`suites: {
-element_text: [
-'./test/specs/element_text/*.js'
-],
-},`
 
 **Run the defined suite:**
 
