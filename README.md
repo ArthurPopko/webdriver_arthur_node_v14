@@ -11,14 +11,14 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 `node -v`
 2. choose the 14th node version: `nvm use 14`
 
-## 1. Running all of auto-tests locally:
-`npx wdio run wdio.conf.js`
+## Running all of auto-tests locally:
+`npm run test`
 ## Running the defined suite locally:
 **Specify suite run in "package.json":**
 
 `"scripts": {
 "test": "wdio",
-"element_text": "wdio --suite <suitename>"
+"textSuite": "wdio --suite <suitename>"
 }`
 
 **Define suite scope in "wdio.conf.js":**
