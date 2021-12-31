@@ -5,7 +5,8 @@ The project correctly works with Node.js 14.
 It's highly recommended to use NVM. It will allow you to switch between the different versions of Node.js on demand.
 **https://github.com/nvm-sh/nvm.git**
 
-######NOTE: 
+##### NOTE:
+
 1. check the node version before every test run:
 `node -v`
 2. choose the 14th node version: `nvm use 14`
@@ -27,4 +28,4 @@ element_text: [
 ###Run the defined suite:
 `npm run <suitename>`
 
-######***to be filled up...***
+to be filled up...
