@@ -4,6 +4,9 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
+    // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
+    // on a remote machine).
+    runner: 'local',
     //
     // ==================
     // Specify Test Files
@@ -53,10 +56,10 @@ exports.config = {
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://saucelabs.com/platform/platform-configurator
+    // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -100,7 +103,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://the-internet.herokuapp.com/',
+    baseUrl: 'http://the-internet.herokuapp.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -117,7 +120,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -141,7 +144,7 @@ exports.config = {
     reporters: ['spec','dot'],
 
 
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -181,9 +184,8 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
-     * @param {String} cid worker id (e.g. 0-0)
      */
-    // beforeSession: function (config, capabilities, specs, cid) {
+    // beforeSession: function (config, capabilities, specs) {
     // },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
@@ -210,16 +212,19 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
-    //     const chai = require('chai')
-    //     const chaiWebdriver = require('chai-webdriverio').default
-    //
-    //     chai.use(chaiWebdriver(browser))
-    //
-    //     global.assert = chai.assert
-    //     global.should = chai.should
-    //     global.expect = chai.expect
-    // }
+    beforeTest: function () {
+        require('expect-webdriverio');
+        global.wdioExpect = global.expect;
+
+        const chai = require('chai')
+        const chaiWebdriver = require('chai-webdriverio').default
+
+        chai.use(chaiWebdriver(browser))
+
+        global.assert = chai.assert
+        global.expect = chai.expect
+        chai.Should()
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
@@ -233,14 +238,7 @@ exports.config = {
     // afterHook: function (test, context, { error, result, duration, passed, retries }) {
     // },
     /**
-     * Function to be executed after a test (in Mocha/Jasmine only)
-     * @param {Object}  test             test object
-     * @param {Object}  context          scope object the test was executed with
-     * @param {Error}   result.error     error object in case the test fails, otherwise `undefined`
-     * @param {Any}     result.result    return object of test function
-     * @param {Number}  result.duration  duration of test
-     * @param {Boolean} result.passed    true if test has passed, otherwise false
-     * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
+     * Function to be executed after a test (in Mocha/Jasmine).
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
@@ -289,10 +287,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
