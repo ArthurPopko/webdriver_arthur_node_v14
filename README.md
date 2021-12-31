@@ -17,6 +17,8 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 
 `npm run <suiteName>`
 
+## You may also specify your own suites:
+
 **Define suite name and scope in "wdio.conf.js":**
 
 `suites: {
@@ -25,7 +27,7 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 ],
 },`
 
-**You may also specify suites in "package.json":**
+**Specify the suite run command in "package.json":**
 
 `"scripts": {
 "test": "wdio",
