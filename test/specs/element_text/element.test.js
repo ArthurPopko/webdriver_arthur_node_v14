@@ -17,9 +17,7 @@ describe("Element interaction", function () {
 
     it("Element element text Xpath FOOTER console log", () => {
         browser.url('/')
-        let text = MainPage.pageFooter.getText()
-        console.log('Here must be a text:')
-        console.log(text);
+        expect(MainPage.pageFooter).toHaveText('Hello!')
     })
 
     it("Element element text Li console log", () => {
@@ -27,7 +25,7 @@ describe("Element interaction", function () {
         MainPage.getLiText()
     })
 
-    it.only("Click 1st link", () => {
+    it("Click 1st link", () => {
         browser.url('/')
         browser.pause(5000)
         console.log('Clicking the 1st link')

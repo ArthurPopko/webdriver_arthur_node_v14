@@ -46,6 +46,6 @@ The allure should be installed globaly. If not, run this command:
 
 To generate the HTML report, run the command:
 
-`allure generate allure-results && allure open`
+`allure generate allure-results --clean && allure open`
 
 to be filled up...
