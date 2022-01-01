@@ -1,4 +1,5 @@
 const MainPage = require('../../pageobjects/main.page')
+
 describe("Element interaction", function () {
     it("Element element text css H2 console log", () => {
         browser.url('/')
@@ -24,6 +25,13 @@ describe("Element interaction", function () {
     it("Element element text Li console log", () => {
         browser.url('/')
         MainPage.getLiText()
+    })
+
+    it.only("Click 1st link", () => {
+        browser.url('/')
+        browser.pause(5000)
+        console.log(MainPage.firstLink.getText())
+        MainPage.clickFirstLink()
     })
 
 })

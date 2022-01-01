@@ -19,10 +19,21 @@ class MainPage {
         return this.parent.$$('li')
     }
 
+    get firstLink() {
+        return $('ul li:nth-child(1) a')
+    }
+
     getLiText() {
         this.childElements.filter((element) => {
             console.log(element.getText())
         })
+    }
+
+    clickFirstLink() {
+        if(this.firstLink.isDisplayed() === true) {
+            this.firstLink.click()
+        }
+        browser.pause(5000)
     }
 }
 module.exports = new MainPage()
