@@ -30,6 +30,7 @@ describe("Element interaction", function () {
     it.only("Click 1st link", () => {
         browser.url('/')
         browser.pause(5000)
+        console.log('Clicking the 1st link')
         console.log(MainPage.firstLink.getText())
         MainPage.clickFirstLink()
     })
