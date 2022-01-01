@@ -1,4 +1,4 @@
-#My 1st WebdriverIO project
+## My 1st WebdriverIO project
 ### Prerequisites:
 #### Install NodeJS
 The project correctly works with Node.js 14. 
@@ -38,5 +38,14 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 **Run the defined suite:**
 
 `npm run <suitename>`
+
+## Report
+The allure should be installed globaly. If not, run this command:
+
+`npm install -g allure-commandline --save-dev`
+
+To generate the HTML report, run the command:
+
+`allure generate allure-results && allure open`
 
 to be filled up...
