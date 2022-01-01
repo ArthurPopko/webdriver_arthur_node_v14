@@ -1,4 +1,6 @@
 const MainPage = require('../../pageobjects/main.page')
+const FirsLinkPage = require('../../pageobjects/validation.first.page')
+
 
 describe("Element interaction", function () {
     it("Element element text css H2 console log", () => {
@@ -25,12 +27,11 @@ describe("Element interaction", function () {
         MainPage.getLiText()
     })
 
-    it("Click 1st link", () => {
+    it.only("Click 1st link", () => {
         browser.url('/')
-        browser.pause(5000)
-        console.log('Clicking the 1st link')
-        console.log(MainPage.firstLink.getText())
         MainPage.clickFirstLink()
+        console.log(FirsLinkPage.firstLinkName.getText())
+        expect(FirsLinkPage.firstLinkName).toBeExisting  
+        expect(FirsLinkPage.firstLinkName).toHaveTextContaining('A/B Test Variation 1')
     })
-
 })

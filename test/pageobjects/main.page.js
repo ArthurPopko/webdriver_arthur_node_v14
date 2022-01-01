@@ -20,7 +20,7 @@ class MainPage {
     }
 
     get firstLink() {
-        return $('ul li:nth-child(1) a')
+        return $('#content > ul > li:nth-child(1) > a')
     }
 
     getLiText() {
