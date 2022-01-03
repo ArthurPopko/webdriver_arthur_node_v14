@@ -28,6 +28,7 @@ class MainPage {
     }
 
     getSpecificChildElementText(index){
+        this.specificChildElement(index).waitForDisplayed()
         return this.specificChildElement(index).getText()
     }
 
@@ -43,5 +44,11 @@ class MainPage {
         }
         browser.pause(5000)
     }
+
+    clickElement(index) {
+        this.specificChildElement(index).click()
+        browser.pause(5000)
+    }
+
 }
 module.exports = new MainPage()
