@@ -23,6 +23,14 @@ class MainPage {
         return $('#content > ul > li:nth-child(1) > a')
     }
 
+    specificChildElement(index) {
+        return this.parent.$(`li:nth-child(${index}) a`)
+    }
+
+    getSpecificChildElementText(index){
+        return this.specificChildElement(index).getText()
+    }
+
     getLiText() {
         this.childElements.filter((element) => {
             console.log(element.getText())
