@@ -1,37 +1,31 @@
 const MainPage = require('../../pageobjects/main.page')
-const FirsLinkPage = require('../../pageobjects/validation.first.page')
 
-
-describe("Element interaction", function () {
-    it("Element element text css H2 console log", () => {
+describe("Element text", function () {
+    it("H2 to Be Displayed", () => {
         browser.url('/')
         let text = MainPage.subHeading.getText()
+        expect(MainPage.subHeading).toBeDisplayed()
         console.log('Here must be a text:')
         console.log(text);
     })
 
-    it("Element element text css HEADING console log", () => {
+    it("HEADING to Be Existing", () => {
         browser.url('/')
         let text = MainPage.pageHeader.getText()
+        expect(MainPage.pageHeader).toBeExisting()
         console.log('Here must be a text:')
         console.log(text);
     })
 
-    it("Element element text Xpath FOOTER console log", () => {
+    it("FOOTER to Be Displayed In Viewport", () => {
         browser.url('/')
-        expect(MainPage.pageFooter).toHaveText('Hello!')
+        expect(MainPage.pageFooter).toHaveText('Powered by Elemental Selenium')
+        expect(MainPage.pageFooter).toBeDisplayedInViewport()
     })
 
-    it("Element element text Li console log", () => {
+    it("Number of elements", () => {
         browser.url('/')
         MainPage.getLiText()
-    })
-
-    it.only("Click 1st link", () => {
-        browser.url('/')
-        MainPage.clickFirstLink()
-        console.log(FirsLinkPage.firstLinkName.getText())
-        expect(FirsLinkPage.firstLinkName).toBeExisting  
-        expect(FirsLinkPage.firstLinkName).toHaveTextContaining('A/B Test Variation 1')
+        expect(MainPage.childElements).toBeElementsArrayOfSize(44)
     })
 })
