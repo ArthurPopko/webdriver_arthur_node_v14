@@ -35,6 +35,9 @@ exports.config = {
         ],
         tabsSuite: [
             'test/specs/tabs_test/*.js'
+        ],
+        iFrameSuite: [
+            'test/specs/iframe_test/*.js'
         ]
     },
     // Patterns to exclude.

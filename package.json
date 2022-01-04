@@ -8,7 +8,8 @@
     "textSuite": "wdio -l  error --suite textSuite",
     "mouseSuite": "wdio -l  error --suite mouseSuite",
     "keyboardSuite": "wdio -l  error --suite keyboardSuite",
-    "tabsSuite": "wdio -l  error --suite tabsSuite"
+    "tabsSuite": "wdio -l  error --suite tabsSuite",
+    "iFrameSuite": "wdio -l  error --suite iFrameSuite"
   },
   "repository": {
     "type": "git",
