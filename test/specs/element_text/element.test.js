@@ -1,6 +1,6 @@
 const MainPage = require('../../pageobjects/main.page')
 
-describe("Element text", function () {
+describe.skip("Element text", function () {
     it("H2 to Be Displayed", () => {
         browser.url('/')
         let text = MainPage.subHeading.getText()
