@@ -209,7 +209,8 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
+    // beforeTest: function () {
+        
     // },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling

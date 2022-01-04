@@ -23,6 +23,15 @@ class MainPage {
         return $('#content > ul > li:nth-child(1) > a')
     }
 
+    specificChildElement(index) {
+        return this.parent.$(`li:nth-child(${index}) a`)
+    }
+
+    getSpecificChildElementText(index){
+        this.specificChildElement(index).waitForDisplayed()
+        return this.specificChildElement(index).getText()
+    }
+
     getLiText() {
         this.childElements.filter((element) => {
             console.log(element.getText())
@@ -35,5 +44,11 @@ class MainPage {
         }
         browser.pause(5000)
     }
+
+    clickElement(index) {
+        this.specificChildElement(index).click()
+        browser.pause(5000)
+    }
+
 }
 module.exports = new MainPage()
