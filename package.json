@@ -7,7 +7,8 @@
     "test": "wdio -l  error",
     "textSuite": "wdio -l  error --suite textSuite",
     "mouseSuite": "wdio -l  error --suite mouseSuite",
-    "keyboardSuite": "wdio -l  error --suite keyboardSuite"
+    "keyboardSuite": "wdio -l  error --suite keyboardSuite",
+    "tabsSuite": "wdio -l  error --suite tabsSuite"
   },
   "repository": {
     "type": "git",

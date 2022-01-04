@@ -20,6 +20,9 @@ describe("Element text", function () {
     it("FOOTER to Be Displayed In Viewport", () => {
         browser.url('/')
         expect(MainPage.pageFooter).toHaveText('Powered by Elemental Selenium')
+        browser.pause(2000)
+        MainPage.pageFooter.scrollIntoView()
+        browser.pause(2000)
         expect(MainPage.pageFooter).toBeDisplayedInViewport()
     })
 

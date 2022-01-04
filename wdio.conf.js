@@ -32,6 +32,9 @@ exports.config = {
         ],
         keyboardSuite: [
             'test/specs/keyboard_test/*.js'
+        ],
+        tabsSuite: [
+            'test/specs/tabs_test/*.js'
         ]
     },
     // Patterns to exclude.
