@@ -1,7 +1,6 @@
 const DragNDropPage = require("../../pageobjects/drag.n.drop.page")
 
 describe('Drag and Drop interaction', () => {
-    let text = 'My name is Arthur!'
 
     it('Drag and Drop fail', function () {
         console.log('WHEN USER opens the Drag and Drop page')
@@ -19,7 +18,7 @@ describe('Drag and Drop interaction', () => {
 
     });
 
-    it.skip('Drag and Drop passed ', function () {
+    it('Drag and Drop passed ', function () {
         browser.url('https://crossbrowsertesting.github.io/drag-and-drop.html')
         DragNDropPage.dragDraggableToDroppable()
         expect(DragNDropPage.droppable).toHaveText('Dropped!')

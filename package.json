@@ -10,7 +10,9 @@
     "keyboardSuite": "wdio -l  error --suite keyboardSuite",
     "tabsSuite": "wdio -l  error --suite tabsSuite",
     "iFrameSuite": "wdio -l  error --suite iFrameSuite",
-    "dragAndDropSuite": "wdio -l  error --suite dragAndDropSuite"
+    "dragAndDropSuite": "wdio -l  error --suite dragAndDropSuite",
+    "dropdownListSuite": "wdio -l  error --suite dropdownListSuite",
+    "alertsSuite": "wdio -l  error --suite alertsSuite"
   },
   "repository": {
     "type": "git",
