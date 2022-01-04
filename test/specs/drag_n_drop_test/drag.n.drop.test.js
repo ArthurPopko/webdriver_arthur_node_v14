@@ -1,9 +1,9 @@
 const DragNDropPage = require("../../pageobjects/drag.n.drop.page")
 
-describe('iFrame interaction', () => {
+describe('Drag and Drop interaction', () => {
     let text = 'My name is Arthur!'
 
-    it.skip('Drag and Drop fail', function () {
+    it('Drag and Drop fail', function () {
         console.log('WHEN USER opens the Drag and Drop page')
         browser.url('/drag_and_drop')
         console.log('THEN the Drag and Drop page opens')
@@ -19,7 +19,7 @@ describe('iFrame interaction', () => {
 
     });
 
-    it('Drag and Drop passed ', function () {
+    it.skip('Drag and Drop passed ', function () {
         browser.url('https://crossbrowsertesting.github.io/drag-and-drop.html')
         DragNDropPage.dragDraggableToDroppable()
         expect(DragNDropPage.droppable).toHaveText('Dropped!')
