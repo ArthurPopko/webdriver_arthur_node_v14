@@ -3,7 +3,7 @@ const CheckboxesPage = require('../../pageobjects/checkboxes.page');
 const MainPage = require('../../pageobjects/main.page')
 const FirsLinkPage = require('../../pageobjects/validation.first.page')
 
-describe.skip('Element action', () => {
+describe('Element action', () => {
     it("Click 1st link", () => {
         browser.url('/')
         MainPage.clickFirstLink()

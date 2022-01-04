@@ -27,6 +27,12 @@ exports.config = {
         textSuite: [
             './test/specs/element_text/*.js'
         ],
+        mouseSuite: [
+            './test/specs/mouse/*.js'
+        ],
+        keyboardSuite: [
+            '.test/specs/keyboard/*.js'
+        ]
     },
     // Patterns to exclude.
     exclude: [

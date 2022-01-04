@@ -4,8 +4,10 @@
   "description": "my 1st webdriverIO project",
   "main": "index.js",
   "scripts": {
-    "test": "wdio || true",
-    "textSuite": "wdio || true --suite textSuite"
+    "test": "wdio -l  error",
+    "textSuite": "wdio -l  error --suite textSuite",
+    "mouseSuite": "wdio -l  error --suite mouseSuite",
+    "keyboardSuite": "wdio -l  error --suite keyboardSuite"
   },
   "repository": {
     "type": "git",
