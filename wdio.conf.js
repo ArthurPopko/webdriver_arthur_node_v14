@@ -38,6 +38,9 @@ exports.config = {
         ],
         iFrameSuite: [
             'test/specs/iframe_test/*.js'
+        ],
+        dragAndDropSuite: [
+            'test/specs/drag_n_drop_test/*.js'
         ]
     },
     // Patterns to exclude.
