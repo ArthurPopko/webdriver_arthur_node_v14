@@ -50,6 +50,9 @@ exports.config = {
         ],
         dynamicControlsSuite: [
             'test/specs/dynamic_controls_test/*.js'
+        ],
+        waitForExistSuite: [
+            'test/specs/wait_for_exist_test/*.js'
         ]
     },
     // Patterns to exclude.

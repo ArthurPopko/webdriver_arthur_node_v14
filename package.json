@@ -13,7 +13,8 @@
     "dragAndDropSuite": "wdio -l  error --suite dragAndDropSuite",
     "dropdownListSuite": "wdio -l  error --suite dropdownListSuite",
     "alertsSuite": "wdio -l  error --suite alertsSuite",
-    "dynamicControlsSuite": "wdio -l  error --suite dynamicControlsSuite"
+    "dynamicControlsSuite": "wdio -l  error --suite dynamicControlsSuite",
+    "waitForExistSuite": "wdio -l  error --suite waitForExistSuite"
   },
   "repository": {
     "type": "git",
