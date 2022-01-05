@@ -4,17 +4,17 @@
   "description": "my 1st webdriverIO project",
   "main": "index.js",
   "scripts": {
-    "test": "wdio -l  error",
-    "textSuite": "wdio -l  error --suite textSuite",
-    "mouseSuite": "wdio -l  error --suite mouseSuite",
-    "keyboardSuite": "wdio -l  error --suite keyboardSuite",
-    "tabsSuite": "wdio -l  error --suite tabsSuite",
-    "iFrameSuite": "wdio -l  error --suite iFrameSuite",
-    "dragAndDropSuite": "wdio -l  error --suite dragAndDropSuite",
-    "dropdownListSuite": "wdio -l  error --suite dropdownListSuite",
-    "alertsSuite": "wdio -l  error --suite alertsSuite",
-    "dynamicControlsSuite": "wdio -l  error --suite dynamicControlsSuite",
-    "waitForExistSuite": "wdio -l  error --suite waitForExistSuite"
+    "test": "ENV=qa wdio -l  error",
+    "textSuite": "ENV=qa wdio -l  error --suite textSuite",
+    "mouseSuite": "ENV=qa wdio -l  error --suite mouseSuite",
+    "keyboardSuite": "ENV=qa wdio -l  error --suite keyboardSuite",
+    "tabsSuite": "ENV=qa wdio -l  error --suite tabsSuite",
+    "iFrameSuite": "ENV=qa wdio -l  error --suite iFrameSuite",
+    "dragAndDropSuite": "ENV=qa wdio -l  error --suite dragAndDropSuite",
+    "dropdownListSuite": "ENV=qa wdio -l  error --suite dropdownListSuite",
+    "alertsSuite": "ENV=qa wdio -l  error --suite alertsSuite",
+    "dynamicControlsSuite": "ENV=qa wdio -l  error --suite dynamicControlsSuite",
+    "waitForExistSuite": "ENV=qa wdio -l  error --suite waitForExistSuite"
   },
   "repository": {
     "type": "git",
