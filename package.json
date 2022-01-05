@@ -12,7 +12,8 @@
     "iFrameSuite": "wdio -l  error --suite iFrameSuite",
     "dragAndDropSuite": "wdio -l  error --suite dragAndDropSuite",
     "dropdownListSuite": "wdio -l  error --suite dropdownListSuite",
-    "alertsSuite": "wdio -l  error --suite alertsSuite"
+    "alertsSuite": "wdio -l  error --suite alertsSuite",
+    "dynamicControlsSuite": "wdio -l  error --suite dynamicControlsSuite"
   },
   "repository": {
     "type": "git",

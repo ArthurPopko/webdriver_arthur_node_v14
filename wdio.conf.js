@@ -47,6 +47,9 @@ exports.config = {
         ],
         alertsSuite: [
             'test/specs/alerts_test/alerts.test.js'
+        ],
+        dynamicControlsSuite: [
+            'test/specs/dynamic_controls_test/*.js'
         ]
     },
     // Patterns to exclude.
