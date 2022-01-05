@@ -15,6 +15,15 @@ class DynamicControlsPage {
         this.enableButton.waitForDisplayed()
         this.enableButton.click()
     }
+
+    get addButton() {
+        return $('#checkbox-example button')
+    }
+
+    clickAddButton() {
+        this.addButton.waitForDisplayed()
+        this.addButton.click()
+    }
 }
 
 module.exports = new DynamicControlsPage()
