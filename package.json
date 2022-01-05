@@ -4,7 +4,7 @@
   "description": "my 1st webdriverIO project",
   "main": "index.js",
   "scripts": {
-    "test": "ENV=qa wdio -l  error",
+    "test": "ENV=qa wdio -l error",
     "textSuite": "ENV=qa wdio -l  error --suite textSuite",
     "mouseSuite": "ENV=qa wdio -l  error --suite mouseSuite",
     "keyboardSuite": "ENV=qa wdio -l  error --suite keyboardSuite",
