@@ -13,39 +13,48 @@ It's highly recommended to use NVM. It will allow you to switch between the diff
 
 ## Running all of auto-tests locally:
 `npm run test`
-## Running the defined suite locally:
 
-`npm run <suiteName>`
+## Running the created test suites:
+```
+    npm run textSuite
+    npm run mouseSuite
+    npm run keyboardSuite
+    npm run iFrameSuite
+    npm run tabsSuite
+    npm run dragAndDropSuite
+    npm run dropdownListSuite
+    npm run alertsSuite
+    npm run dynamicControlsSuite
+    npm run waitForExistSuite
+```
 
-## You may also specify your own suites:
+## To specify your own suites:
 
 **Define suite name and scope in "wdio.conf.js":**
 
-`suites: {
-<suiteName>: [
-'./test/specs_path/*.js'
-],
-},`
+```
+suites: {
+    <suiteName>: [
+        './test/specs_path/*.js'
+    ],
+},
+```
 
 **Specify the suite run command in "package.json":**
-
-`"scripts": {
-"test": "wdio",
-"textSuite": "wdio --suite textSuite",
-"<suiteName>": "wdio --suite <suitename>"
-}`
-
+```
+"scripts": {
+    "<suiteName>": "ENV=qa wdio --suite <suitename>"
+}
+```
 **Run the defined suite:**
 
 `npm run <suitename>`
 
 ## Report
-The allure should be installed globaly. If not, run this command:
+The allure should be installed globally. If not, run this command:
 
 `npm install -g allure-commandline --save-dev`
 
 To generate the HTML report, run the command:
 
 `allure generate allure-results --clean && allure open`
-
-to be filled up...
